@@ -5,7 +5,7 @@ import glob
 from pathlib import Path
 from TelethonBot.utils import load_plugins
 import logging
-from . import BotzHub
+from . import bot
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
@@ -19,7 +19,7 @@ for name in files:
         load_plugins(plugin_name.replace(".py", ""))
 
 print("Successfully deployed!")
-print("Enjoy! Do visit @BotzHub")
+print("Enjoy!")
 
 if __name__ == "__main__":
-    BotzHub.run_until_disconnected()
+    bot.run_until_disconnected()
