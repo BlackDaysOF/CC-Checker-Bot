@@ -1,9 +1,9 @@
 # By < @xditya >
 # // @BotzHub //
-from .. import BotzHub
+from .. import bot
 from telethon import events, Button
 
-@BotzHub.on(events.NewMessage(incoming=True, pattern="/start"))
+@bot.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
     await event.reply("Hello!",
                     buttons=[
@@ -11,6 +11,6 @@ async def start(event):
                         [Button.inline("Inline Button",data="example")]
                     ])
 
-@BotzHub.on(events.callbackquery.CallbackQuery(data="example"))
+@bot.on(events.callbackquery.CallbackQuery(data="example"))
 async def ex(event):
     await event.edit("You clicked a button!")
