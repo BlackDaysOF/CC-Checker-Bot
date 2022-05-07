@@ -1,6 +1,3 @@
-# By < @xditya >
-# // @BotzHub //
-
 from telethon import TelegramClient
 from decouple import config
 import logging
@@ -10,8 +7,8 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
                     level=logging.WARNING)
 
 # Basics
-API_ID = config("API_ID", default=None, cast=int)
-API_HASH = config("API_HASH", default=None)
-BOT_TOKEN = config("BOT_TOKEN", default=None)
+API_ID = "5689646"
+API_HASH = "895de5ae804308803c19814afabb0de7"
+BOT_TOKEN = "5205589679:AAHVdkVgja1qN_UIw4KkjG9sWUHHm6TDMD0"
 
-BotzHub = TelegramClient('BotzHub', API_ID, API_HASH).start(bot_token=BOT_TOKEN) 
+bot = TelegramClient('bot', API_ID, API_HASH).start(bot_token=BOT_TOKEN) 
